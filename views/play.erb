@@ -1,8 +1,18 @@
 <h1> Battle! </h1>
 Player one's name is <%= @player_one %>
-<br> </br>
+<br>
 Points = <%= @player_one_points %>
-<br> </br>
+<br>
 Player two's name is <%= @player_two %>
-<br> </br>
+<br>
 Points = <%= @player_two_points %>
+
+<form action="/attack" method="post">
+  <div>
+  <input type="submit" value="Attack!">
+  </div>
+</form>
+attack history is <%= @attack_history %>
+<% if @attack_history != nil %>
+Confirm attack!
+<% end %>
