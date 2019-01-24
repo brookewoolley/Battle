@@ -8,7 +8,7 @@ class Battle < Sinatra::Base
     erb :index
   end
 
-  post '/play' do
+  post '/names' do
     session[:player_one] = params[:player_one]
     session[:player_two] = params[:player_two]
     redirect "/play"
@@ -16,7 +16,9 @@ class Battle < Sinatra::Base
 
   get '/play' do
     @player_one = session[:player_one]
+    @player_one_points = 0
     @player_two = session[:player_two]
+    @player_two_points = 0
     erb(:play)
   end
 
