@@ -3,6 +3,7 @@ Player one's name is <%= @player_one %>
 <br>
 Points = <%= @player_one_points %>
 <br>
+
 Player two's name is <%= @player_two %>
 <br>
 Points = <%= @player_two_points %>
@@ -12,7 +13,7 @@ Points = <%= @player_two_points %>
   <input type="submit" value="Attack!">
   </div>
 </form>
-attack history is <%= @attack_history %>
+
 <% if @attack_history != nil %>
 Confirm attack!
 <% end %>
